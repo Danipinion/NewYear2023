@@ -1,0 +1,19 @@
+body{
+    background-color: #000;
+    font-size: 5em;
+    color: white;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: red;
+}
+.hidden{
+    display: none;
+}
