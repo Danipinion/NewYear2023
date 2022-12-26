@@ -18,19 +18,36 @@
   </head>
   <body>
     <div class="container" id="container">
-      <div class="animate__animated animate__bounce animate__delay-1s count">
-        1
+      <div class="count show">3</div>
+      <div class="count hidden">2</div>
+      <div class="count hidden">1</div>
+      <div class="btn hidden">
+        <div class="botón" onclick="this.classList.toggle('active')">
+          <div class="fondo" x="0" y="0" width="200" height="200"></div>
+          <div class="icono" width="200" height="200">
+            <div
+              class="parte izquierda"
+              x="0"
+              y="0"
+              width="200"
+              height="200"
+              fill="#fff"
+            ></div>
+            <div
+              class="parte derecha"
+              x="0"
+              y="0"
+              width="200"
+              height="200"
+              fill="#fff"
+            ></div>
+          </div>
+          <div class="puntero"></div>
+        </div>
       </div>
-      <div
-        class="animate__animated animate__bounce animate__delay-1s count hidden"
-      >
-        2
-      </div>
-      <div
-        class="animate__animated animate__bounce animate__delay-1s count hidden"
-      >
-        3
-      </div>
+      <video class="count hidden">
+        <source src="Assets/Video/bg.mp4" type="video/mp4" />
+      </video>
     </div>
     <script src="./Assets/Script/script.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>

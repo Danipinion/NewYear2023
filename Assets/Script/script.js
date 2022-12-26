@@ -38,14 +38,29 @@ function tick() {
 function show() {
   const count = document.querySelectorAll(".count");
   let i = 1;
-  const id = setInterval(frame, 2000);
+  let is = 0;
   function frame() {
     if (i == 3) {
       clearInterval(id);
-    } else {
-      count[i].classList.remove("hidden");
-      i++;
     }
+    count[is].classList.replace("show", "hidden");
+    count[i].classList.replace("hidden", "show");
+    i++;
+    is++;
   }
+  const id = setInterval(frame, 2000);
 }
 show();
+const btn = document.querySelector(".btn");
+setTimeout(() => {
+  btn.classList.remove("hidden");
+}, 6000);
+const video = document.querySelector("video");
+btn.addEventListener("click", () => {
+  const count = document.querySelectorAll(".count");
+  video.play();
+  btn.classList.add("hidden");
+  setTimeout(() => {
+    count[3].classList.replace("show", "hidden");
+  }, 25000);
+});
