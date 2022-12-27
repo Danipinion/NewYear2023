@@ -26,8 +26,6 @@ function tick() {
     let hours = Math.floor((t % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
     let mins = Math.floor((t % (1000 * 60 * 60)) / (1000 * 60));
     let secs = Math.floor((t % (1000 * 60)) / 1000);
-    console.log("🚀 ~ file: script.js:21 ~ tick ~ secs", secs);
-    cetakTime(days, hours, mins, secs);
     if (secs < 1) {
       document.getElementById("demo").textContent = "Klik Here";
       document.getElementById("demo").classList.remove("disable");
@@ -54,13 +52,35 @@ show();
 const btn = document.querySelector(".btn");
 setTimeout(() => {
   btn.classList.remove("hidden");
-}, 6000);
+}, 8000);
 const video = document.querySelector("video");
 btn.addEventListener("click", () => {
   const count = document.querySelectorAll(".count");
+  const titleA = document.querySelectorAll("#container h1");
+  const can = document.querySelector("#Canvas");
+  const te = document.querySelector("#text");
+  const audio = document.querySelector("audio");
+  const text = document;
   video.play();
-  btn.classList.add("hidden");
   setTimeout(() => {
-    count[3].classList.replace("show", "hidden");
-  }, 25000);
+    audio.play();
+  }, 33000);
+  btn.style.opacity = "0";
+  btn.style.zIndex = "-1";
+  setTimeout(() => {
+    count[3].style.opacity = "0";
+    count[3].style.zIndex = "-1";
+    titleA[0].classList.remove("hidden");
+    setTimeout(() => {
+      titleA[1].classList.remove("hidden");
+    }, 4000);
+    setTimeout(() => {
+      can.classList.remove("hidden");
+      titleA[0].style.display = "none";
+      titleA[1].style.display = "none";
+    }, 8000);
+    setTimeout(() => {
+      count[4].classList.replace("hidden", "show");
+    }, 10000);
+  }, 24500);
 });
