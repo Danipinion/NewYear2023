@@ -9,9 +9,8 @@
 
 body {
   font-family: montserrat, sans-serif;
-  /* height: 2000px; */
   background-color: #480f4a;
-  /* overflow-x: hidden; */
+  overflow-x: hidden;
 }
 
 header {
@@ -20,7 +19,6 @@ header {
   background-image: linear-gradient(#0f224a, #480f4a);
   background-size: cover;
   background-position: center;
-  position: relative;
 }
 
 header .center {
@@ -29,33 +27,16 @@ header .center {
   justify-content: center;
   align-items: center;
   min-height: calc(100vh - 200px);
-
 }
 
-header .hidden {
+.hidden {
   display: none;
-}
-
-/* header:after {
-  display: block;
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 0;
-} */
-header .content {
-  position: relative;
-  z-index: 1;
 }
 
 header .content h1 {
   color: white;
   font-size: 50px;
   font-family: 'Niconne', cursive;
-
 }
 
 header .content a {
@@ -79,6 +60,13 @@ header .content .countdown {
   border-top: 1px solid rgba(255, 255, 255, 0.5);
   border-left: 1px solid rgba(255, 255, 255, 0.5);
   backdrop-filter: blur(5px);
+}
+
+iframe {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  z-index: 99;
 }
 
 .keluh-Kesah {
